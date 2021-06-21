@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "database-migration": "scripts/migration.sh",
+    "database-seeding": "scripts/seed.sh",
     "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
