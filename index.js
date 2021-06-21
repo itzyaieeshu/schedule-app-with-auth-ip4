@@ -10,15 +10,13 @@ app.use(expressLayouts);
 
 const port = 3000;
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.render('pages/index', {
-        layout: 'layouts/main'
-    });
-})
+require('./routes/routes')(app);
+
 
 app.listen(port, () => {
     console.log(`Mr.coffee app listening at http://localhost:${port}`);
