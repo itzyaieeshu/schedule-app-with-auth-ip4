@@ -1,0 +1,39 @@
+<h2>Signup page for schedules app</h2>
+<form class="form" action="/signup" method="POST">
+    <div>
+        <label class="form-label" for="firstname">First name</label>
+        <input class="form-input" type="text" id="firstname" name="firstname">
+        <p class="alert hidden">Not valid.</p>
+    </div>
+
+    <div>
+        <label class="form-label" for="lastname">Last name</label>
+        <input class="form-input" type="text" id="lastname" name="lastname">
+        <p class="alert hidden">Not valid.</p>
+    </div>
+
+    <div>
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" type="email" id="email" name="email">
+        <p class="alert hidden">Not valid.</p>
+    </div>
+
+    <div>
+        <label class="form-label" for="password">Password</label>
+        <p class="description">Passwords must be at least at least 6 characters long and contain 1 uppercase
+            letter, 1 lowercase letter, and 1 number.</p>
+        <input class="form-input" type="password" id="password" name="password">
+        <p class="alert hidden">Not valid.</p>
+    </div>
+
+
+    <div>
+        <label class="form-label" for="confirm-password">Confirm password</label>
+        <p class="description">Please type it again</p>
+        <input class="form-input" type="password" id="confirm-password" name="confirm-password">
+        <p class="alert hidden">Not valid.</p>
+    </div>
+    
+    <button type="submit" class="button">Submit</button>
+</ul>
+</form>

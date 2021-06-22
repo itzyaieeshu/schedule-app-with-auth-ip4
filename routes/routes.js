@@ -1,5 +1,9 @@
-const index = require('./index/index');
+const index = require('./handlers/index');
+const login = require('./handlers/login');
+const signup = require('./handlers/signup');
 
 module.exports = (app) => {
-    app.get('/', index.indexPage)
+    app.get('/', index.indexPage),
+    app.get('/login', login.loginPage),
+    app.get('/signup', signup.signupPage)
 };
