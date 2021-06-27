@@ -17,8 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(session({
     cookie: {
-        maxAge: 1000 * 60 * 10,
+        maxAge: 1000 * 60 * 10, 
     },
+    name: 'mrcoffee_sid',
     secret: process.env.SESSION_KEY,
     resave: false,
     saveUninitialized: false,

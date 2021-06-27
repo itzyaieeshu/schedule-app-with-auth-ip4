@@ -19,7 +19,7 @@ const login = (req, res) => {
             } else {
                 bcrypt.compare(data.password, existingUser.password, (err, result) => {
                     if (result == true) {
-                        req.session.UserId = existingUser.id;
+                        req.session.userId = existingUser.id;
                         res.redirect('/');
                     } else {
                         console.log(err);
