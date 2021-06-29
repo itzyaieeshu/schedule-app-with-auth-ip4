@@ -1,7 +1,8 @@
 const express = require('express');
-require('dotenv').config();
 const expressLayouts = require('express-ejs-layouts');
+const session = require('express-session');
 
+require('dotenv').config();
 const app = express();
 const db = require('./config/database');
 
@@ -14,7 +15,15 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-
+app.use(session({
+    cookie: {
+        maxAge: 1000 * 60 * 10, 
+    },
+    name: 'mrcoffee_sid',
+    secret: process.env.SESSION_KEY,
+    resave: false,
+    saveUninitialized: false,
+}))
 require('./routes/routes')(app);
 
 
