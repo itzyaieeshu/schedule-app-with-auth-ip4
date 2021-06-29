@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: #555;
+    font-family: sans-serif;
+    font-size:  20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+h2 {
+    color: rgb(74, 165, 218);
+    font-size: 150%;
+    margin-top: 50px ;
+    text-align: center;
+    background-color: rgb(244, 244, 250);
+}
+
+h3 {
+    color: rgb(74, 213, 231);
+    font-size: 140%;
+    margin-top:20vh;
+    text-align: center;
+}
+
+.flex-container {
+    max-width: 50%;
+    display:flex;
+    flex-direction: column;
+    height: 150px;
+    margin: 50px auto;
+    justify-content: space-around;
+    
+}
+
+.flex-container.login-page {
+    background-color: rgb(248, 252, 252);
+    max-width:30%;
+    border: 2px solid #555;
+    margin-top: 30px;
+    display:flex;
+    height: 400px;
+    border-radius: 20px;
+    justify-content: space-evenly;
+
+
+}
+
+.flex-items {
+    border: 2px solid #555;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    width:90%;
+    
+}
+
+.item1, .item2 {
+    text-decoration: none;
+    width:100%;
+    padding-top: 10px;
+    
+}
+
+.flex-items.item1 {
+    background-color:rgb(231, 212, 43); 
+    transition-duration: 1.5s;
+}
+
+.flex-items.item2 {
+    background-color: rgb(241, 109, 109);
+    transition-duration: 1.5s;
+}
+
+.flex-items.item1:hover{
+    background-color: rgb(243, 45, 227);
+    color: rgb(28, 49, 243);;
+}
+
+.flex-items.item2:hover{
+    background-color: rgb(28, 49, 243);
+    color:#fff;
+}
+
+
+.flex-items.email , .flex-items.password {
+    max-width: 70%;
+    margin:0 auto;
+    background-color: rgb(178, 200, 241);
+    color: rgb(95, 12, 12);
+
+    
+}
+
+.flex-items.btn {
+    color: white;
+    background-color: blue;
+    width: 70%;
+    margin:0 auto;
+    transition-duration: 1.5s;
+    
+
+}
+
+.flex-items.btn:hover{
+    cursor: pointer;
+    background-color: tomato;
+}
+
+.flex-items.sign-up-option {
+    border-color: #fff;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+    margin: 100px auto;
+}
+.form{
+    width:100%;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    position:relative;
+    padding: 10px;
+    
+
+}
+
+.form-control input{
+    display: block;
+    width:100%;
+    height:45px;
+    background-color: rgb(252, 248, 248);
+    color: rgb(13, 14, 13);
+    font: inherit;
+    font-size: 100%;
+
+}
+
+.form-control.success input{
+    border-color: rgb(11, 243, 11);
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control.success i.fa-check-circle{
+    visibility: visible;
+    color: rgb(11, 243, 11);
+}
+
+.form-control.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.form-control.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.form-control i{
+    position: absolute;
+    right:15px;
+    top:45px;
+    visibility: hidden;
+    
+   
+}
+
+.form-control small{
+    position: absolute;
+    visibility: hidden;
+    
+}
+
+.btn {
+    background-color: lightcoral;
+    width: 100%;
+    margin-bottom:10px;
+    height: 40px;
+    transition-duration: 1.5s;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color:rgb(28, 49, 243);
+    color: white;
+}

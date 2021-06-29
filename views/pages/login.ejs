@@ -1,4 +1,4 @@
-<form class="form" method="POST" action="/login">
+<!-- <form class="form" method="POST" action="/login">
     <div>
         <label class="form-label" for="email">Email</label>
         <input class="form-input" type="email" id="email" name="email" required>
@@ -8,4 +8,13 @@
         <input class="form-input" type="password" id="password" name="password" required>
     </div>
     <button class="button" type="submit">Login</button>
-</form>
+</form> -->
+<div class="login-container">
+    <h3> Login </h3>
+        <form class="flex-container login-page" method="POST" action="/login">
+            <input class="flex-items email " type="email"  name="email" placeholder="Email or Username" required>
+            <input class="flex-items password" type="password" name="password" placeholder="password" required>
+            <button class="flex-items btn" type="submit" name="Submit">Login</button>
+            <p class="flex-items sign-up-option">New member? Click <a href="signup"> here </a>to signup</p>   
+        </form>
+</div>
