@@ -1,4 +1,4 @@
-<h2>Signup page for schedules app</h2>
+<!-- <h2>Signup page for schedules app</h2>
 <form class="form" action="/signup" method="POST">
     <div>
         <label class="form-label" for="firstname">First name</label>
@@ -36,4 +36,119 @@
     
     <button type="submit" class="button">Submit</button>
 </ul>
-</form>
+</form> -->
+
+<!-- 
+<h2>Signup page for schedules app</h2>
+<form class="form" action="/signup" method="POST">
+    <div class="form-items">
+       <div>
+            <label class="form-label" for="firstname">First name*</label>
+       </div>
+        <div>
+            <input class="form-input" type="text" id="firstname" name="firstname">
+        </div>
+        
+    </div>
+
+    <div class="form-items">
+        <div>
+            <label class="form-label" for="lastname">Last name*</label>
+        </div>
+        <div>
+            <input class="form-input" type="text" id="lastname" name="lastname">
+        </div>
+        
+    </div>
+
+    <div class="form-items">
+        <div>
+            <label class="form-label" for="email">Email*</label>
+        </div>
+        <div>
+            <input class="form-input" type="email" id="email" name="email">
+        </div>
+        
+    </div>
+
+    <div class="form-items">
+        <div>
+            <label class="form-label" for="password">Password*</label>
+        </div>
+        
+        <div>
+            <input class="form-input" type="password" id="password" name="password">
+        </div>
+        
+    </div>
+
+
+    <div class="form-items">
+        <div>
+            <label class="form-label" for="confirm-password">Confirm password*</label>
+        </div>
+        
+        <div>
+            <input class="form-input" type="password" id="confirm-password" name="confirm-password">
+        </div>
+        
+    </div>
+    
+    <div class="form-items">
+        <button type="submit" class="btn">Submit</button>
+    </div>
+    <div>
+        <p>Already have an account?<a href="login" > click here</a></p>
+    </div>
+</ul>
+</form> -->
+
+<div class="flex">
+    <h2> Signup page for schedules app</h2>
+    <form action="/" method="GET" class="form" id="form">
+        <div class="form-control">
+            <label>First name*</label>
+            <input type="text" id="firstname" placeholder="enter your first name">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>error message</small>
+        </div>
+        <div class="form-control">
+            <label >last Name*</label>
+            <input type="text" id="lastname" placeholder="enter your last Name:">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>error message</small>
+        </div>
+        <div class="form-control">
+            <label>Email*</label>
+            <input type="text" id="email" placeholder="enter your email address:">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>error message</small>
+        </div>
+        <div class="form-control">
+            <label>Password*</label>
+            <input type="password" id="password" placeholder="enter your password:">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>error message</small>
+        </div>
+        <div class="form-control">
+            <label>Confirm Password*</label>
+            <input type="password" id="confirm-password" placeholder="Re-enter your password:">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>error message</small>
+        </div>
+        <div class="form-control">
+            <button class="btn">Submit</button>
+        </div>
+        <div class="form-control">
+            <p>Already have an account?<a href="login" > click here</a></p>
+        </div>
+    </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
