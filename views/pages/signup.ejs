@@ -105,24 +105,24 @@
 
 <div class="flex">
     <h2> Signup page for schedules app</h2>
-    <form action="/" method="GET" class="form" id="form">
+    <form action="/signup" method="post" class="form" id="form">
         <div class="form-control">
             <label>First name*</label>
-            <input type="text" id="firstname" placeholder="enter your first name">
+            <input type="text" id="firstname" name="firstname" placeholder="enter your first name">
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>error message</small>
         </div>
         <div class="form-control">
             <label >last Name*</label>
-            <input type="text" id="lastname" placeholder="enter your last Name:">
+            <input type="text" id="lastname" name="lastname" placeholder="enter your last Name:">
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>error message</small>
         </div>
         <div class="form-control">
             <label>Email*</label>
-            <input type="text" id="email" placeholder="enter your email address:">
+            <input type="text" id="email" name="email" placeholder="enter your email address:">
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>error message</small>
@@ -136,19 +136,18 @@
         </div>
         <div class="form-control">
             <label>Confirm Password*</label>
-            <input type="password" id="confirm-password" placeholder="Re-enter your password:">
+            <input type="password" id="confirm-password" name="password" placeholder="Re-enter your password:">
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>error message</small>
         </div>
         <div class="form-control">
-            <button class="btn">Submit</button>
+            <button class="btn" type="submit">Submit</button>
         </div>
         <div class="form-control">
             <p>Already have an account?<a href="login" > click here</a></p>
         </div>
     </form>
 </div>
-<script src="script.js"></script>
 </body>
 </html>

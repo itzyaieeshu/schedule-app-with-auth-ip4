@@ -6,51 +6,53 @@ const password = document.getElementById('passsword');
 const password1 = document.getElementById('cofirm-password');
 // console.log('1');
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // console.log('2');
-    checkInputs();
+    if (firstNameValidation() && lastNameValidation() && emailValidation()) {
+        document.getElementById("form").submit();
+    } else {
+        e.preventDefault();
+    }
 });
 
-function checkInputs() {
+function firstNameValidation() {
     const firstnameValue = firstName.value.trim();
-    const lastnameValue = lastName.value.trim();
-    const emailValue = email.value.trim();
-    // const passwordValue = password.value.trim();
-    // const password1Value = password1.value.trim();
-    // console.log('3');
-    //regex
     const regnames = /^[A-Za-zÀ-ÖØ-öø-ÿ \-‘]+$/;             // /^[a-zA-Z]+[^0-9@!#%^&*()+{}]$/;
-    const regemail =  /^[a-z0-9.!#$%&‘*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/     ///[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9]+/;
-
-
     if (firstnameValue === ""){
         setErrorFor(firstName , 'firstname cannot be empty!');
-        
-    }else if(!regnames.test(firstnameValue)){
+        return false
+    } else if(!regnames.test(firstnameValue)){
         setErrorFor(firstName , 'firstname can only be letters.');
-        
-        
-    }else {
+        return false
+    } else {
         setSuccessFor(firstName);
-    }
-
-    if (lastnameValue === ""){
-        setErrorFor(lastName , 'Lastname cannot be empty!');
-        
-    }else if(!regnames.test(lastnameValue)){
-        setErrorFor(lastName , 'Lastname can only be letters.');
-        
-        
-    }else {
-        setSuccessFor(lastName);
-    }
-
-    if ((emailValue === '')||(!regemail.test(emailValue))){
-        setErrorFor(email , 'email is invalid.');
-    }else {
-        setSuccessFor(email);
+        return true
     }
 }
+function lastNameValidation() {
+    const lastnameValue = lastName.value.trim();
+    const regnames = /^[A-Za-zÀ-ÖØ-öø-ÿ \-‘]+$/;             // /^[a-zA-Z]+[^0-9@!#%^&*()+{}]$/;
+    if (lastnameValue === ""){
+        setErrorFor(lastName , 'Lastname cannot be empty!');
+        return false
+    } else if(!regnames.test(lastnameValue)){
+        setErrorFor(lastName , 'Lastname can only be letters.');
+        return false 
+    } else {
+        setSuccessFor(lastName);
+        return true
+    }
+}
+function emailValidation() {
+    const emailValue = email.value.trim();
+    const regemail =  /^[a-z0-9.!#$%&‘*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/     ///[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9]+/;
+    if ((emailValue === '')||(!regemail.test(emailValue))){
+        setErrorFor(email , 'email is invalid.');
+        return false
+    }else {
+        setSuccessFor(email);
+        return true
+    }
+}
+
 // setSuccessFor(firstName);
 function setErrorFor(input, message){
     const formControl = input.parentElement;
